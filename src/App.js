@@ -17,6 +17,12 @@ function App() {
             case '␈':
                 setResult(result.slice(0,-1));
                 break;
+            case '÷':
+                setResult(result.concat("/"));
+                break;
+            case '×':
+                setResult(result.concat("*"));
+                break;
             case 'Result':
                 try {
                     setResult(eval(result).toString());
@@ -33,12 +39,12 @@ function App() {
     return (
         <div className="calc-app">
             <form action="">
-                <input type="text" value={result} ref={inputRef} />
+                <input type="text" value={result} ref={inputRef} readOnly />
             </form>
 
             <div className="keypad">
-                <button onClick={handleClick}>Clear</button>
-                <button onClick={handleClick}>&#9224;</button>
+                <button id="btn-clear" onClick={handleClick}>Clear</button>
+                <button id="btn-backspace" onClick={handleClick}>&#9224;</button>
                 <button onClick={handleClick}>+</button>
                 <button onClick={handleClick}>7</button>
                 <button onClick={handleClick}>8</button>
@@ -54,7 +60,7 @@ function App() {
                 <button onClick={handleClick}>&divide;</button>
                 <button onClick={handleClick}>0</button>
                 <button onClick={handleClick}>.</button>
-                <button onClick={handleClick}>Result</button>
+                <button id="btn-result" onClick={handleClick}>Result</button>
             </div>
         </div>
     )

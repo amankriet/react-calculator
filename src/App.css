@@ -1,0 +1,45 @@
+.calc-app {
+    margin: 0 auto;
+    width: 256px;
+    text-align: center;
+    margin-top: 64px;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: minmax(60px, auto);
+}
+
+input {
+    width: 250px;
+    height: 60px;
+    border: 1px blue solid;
+    background-color: whitesmoke;
+    font-size: 1.4rem;
+}
+
+#btn-clear {
+    grid-row: 1;
+    grid-column: 1/3;
+    background-color: red;
+}
+
+#btn-result {
+    grid-column: 3/5;
+    grid-row: inherit;
+}
+
+#btn-backspace {
+    background-color: orange;
+}
+
+#btn-result {
+    background-color: lightgreen;
+}
+
+button {
+    border: none;
+    margin: 1px;
+    border-radius: 16px;
+}
