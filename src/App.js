@@ -19,10 +19,10 @@ function App() {
                 backspace();
                 break;
             case '÷':
-                divide();
+                division();
                 break;
             case '×':
-                multiply();
+                multiplication();
                 break;
             case 'Result':
                 calcResult();
@@ -79,11 +79,11 @@ function App() {
         }
     }
 
-    function divide() {
+    function division() {
         setResult(result.concat("/"));
     }
 
-    function multiply() {
+    function multiplication() {
         setResult(result.concat("*"));;
     }
 
