@@ -15,7 +15,7 @@ function App() {
             case 'Clear':
                 clear();
                 break;
-            case '␈':
+            case '⌫':
                 backspace();
                 break;
             case '÷':
@@ -105,7 +105,7 @@ function App() {
 
             <div className="keypad">
                 <button className="highlight" id="btn-clear" onClick={handleClick}>Clear</button>
-                <button className="highlight" id="btn-backspace" onClick={handleClick}>&#9224;</button>
+                <button className="highlight" id="btn-backspace" onClick={handleClick}>&#9003;</button>
                 <button className="highlight" onClick={handleClick}>+</button>
                 <button onClick={handleClick}>7</button>
                 <button onClick={handleClick}>8</button>
