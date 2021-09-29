@@ -28,7 +28,6 @@ function App() {
                 calcResult();
                 break;
             default:
-                console.log(e.target.innerText);
                 inputText(e.target.innerText);
                 break;
         }
@@ -61,7 +60,7 @@ function App() {
 
     function calcResult() {
         try {
-            setResult(eval(result).toString());
+            setResult(Function('"use strict";return ('+result+').toString()')());
         } catch (error) {
             setResult("Error");
         }
