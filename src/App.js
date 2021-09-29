@@ -61,6 +61,7 @@ function App() {
     function calcResult() {
         try {
             let text = (result.toString()).replaceAll(/(?!\D+)0+(?=[1-9])/g, "");
+            // eslint-disable-next-line
             setResult(Function('"use strict";return ('+text+').toString()')());
         } catch (error) {
             console.error(error);

@@ -6,7 +6,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: gray;
+    background-image: url(./calc-icon.png);
+    background-color: #101116;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 192px;
 }
 
 .calc-app {
