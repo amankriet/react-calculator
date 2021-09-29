@@ -12,7 +12,7 @@ function App() {
 
     function handleClick(e) {
         switch (e.target.innerText) {
-            case 'Clear':
+            case 'AC':
                 clear();
                 break;
             case '⌫':
@@ -24,7 +24,7 @@ function App() {
             case '×':
                 multiplication();
                 break;
-            case 'Result':
+            case '=':
                 calcResult();
                 break;
             default:
