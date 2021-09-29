@@ -1,28 +1,52 @@
+* {
+    font-size: 18px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+}
+
 .calc-app {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
     margin: 0 auto;
     width: 256px;
     text-align: center;
-    margin-top: 64px;
+    background-color: #101116;
+    border: 8px solid #101116;
+    border-radius: 4px;
 }
 
 .keypad {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: minmax(60px, auto);
 }
 
 input {
     width: 250px;
     height: 60px;
-    border: 1px blue solid;
-    background-color: whitesmoke;
+    border: 0px;
+    background-color: #10111600;
+    cursor: pointer;
+    color: white;
+    text-align: right;
     font-size: 1.4rem;
+    font-weight: 700;
+}
+
+input:focus {
+    outline: none;
 }
 
 #btn-clear {
     grid-row: 1;
     grid-column: 1/3;
-    background-color: red;
 }
 
 #btn-result {
@@ -30,16 +54,14 @@ input {
     grid-row: inherit;
 }
 
-#btn-backspace {
-    background-color: orange;
-}
-
-#btn-result {
-    background-color: lightgreen;
-}
-
 button {
     border: none;
-    margin: 1px;
-    border-radius: 16px;
+    margin: 8px;
+    border-radius: 4px;
+    color: white;
+    background-color: #262834;
+}
+
+.highlight {
+    background-color: #56cbdb;
 }
