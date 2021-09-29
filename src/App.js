@@ -60,7 +60,8 @@ function App() {
 
     function calcResult() {
         try {
-            setResult(Function('"use strict";return ('+result+').toString()')());
+            // setResult(Function('"use strict";return ('+result+').toString()')());
+            setResult(eval(result).toString());
         } catch (error) {
             setResult("Error");
         }
