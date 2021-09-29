@@ -105,7 +105,7 @@ function App() {
             <input type="text" value={result} ref={inputRef} onChange={handleUserInput} onKeyUp={handleUserInput} />
 
             <div className="keypad">
-                <button className="highlight" id="btn-clear" onClick={handleClick}>Clear</button>
+                <button className="highlight" id="btn-clear" onClick={handleClick}>AC</button>
                 <button className="highlight" id="btn-backspace" onClick={handleClick}>&#9003;</button>
                 <button className="highlight" onClick={handleClick}>+</button>
                 <button onClick={handleClick}>7</button>
@@ -122,7 +122,7 @@ function App() {
                 <button className="highlight" onClick={handleClick}>&divide;</button>
                 <button onClick={handleClick}>0</button>
                 <button onClick={handleClick}>.</button>
-                <button className="highlight" id="btn-result" onClick={handleClick}>Result</button>
+                <button className="highlight" id="btn-result" onClick={handleClick}>=</button>
             </div>
         </div>
     )
